@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    
+    <p id="message">Enter the code to disarm the bomb:</p>
+    <div id="timer">40</div>
+    <p id="explodedMessage" style="display: none;">The bomb exploded!</p>
+    <div class="bomb">
+        <p class="display" id="codeDisplay">0000</p>
+        <div class="button-container">
+            <button class="button" onclick="addDigit('1')">1</button>
+            <button class="button" onclick="addDigit('2')">2</button>
+            <button class="button" onclick="addDigit('3')">3</button>
+            <button class="button" onclick="addDigit('4')">4</button>
+            <button class="button" onclick="addDigit('5')">5</button>
+            <button class="button" onclick="addDigit('6')">6</button>
+            <button class="button" onclick="addDigit('7')">7</button>
+            <button class="button" onclick="addDigit('8')">8</button>
+            <button class="button" onclick="addDigit('9')">9</button>
+            <div class="button-container-0">
+                <button class="button" onclick="addDigit('0')">0</button>
+            </div>
+        </div>
+        <button class="button" onclick="disarmBomb()" style="width: 100%;">Disarm Bomb</button>
+    </div>
+   
+    <script src="bomb.js"></script>
+</body>
+</html>

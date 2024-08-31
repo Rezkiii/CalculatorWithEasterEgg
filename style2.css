@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: lime;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px; 
+    white-space: pre-wrap; 
+    overflow-x: hidden; 
+}
+
+#terminal {
+    max-width: 100%;
+    word-wrap: break-word; 
+    font-size: 2vw; 
+    line-height: 1.5; 
+}
+
+@media (max-width: 600px) {
+    #terminal {
+        font-size: 4vw;
+    }
+}

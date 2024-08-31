@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 20px; 
+    transition: background-color 1s ease;
+}
+
+.bomb {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.display {
+    font-size: 2rem;
+    margin: 20px 0;
+    background-color: black;
+    color: lime;
+    padding: 10px;
+    border: 2px solid lime;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: lime;
+    color: black;
+    border: none;
+    padding: 15px; 
+    font-size: 1.5rem; 
+    cursor: pointer;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: yellow;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.button-container-0 {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5rem; 
+}
+
+#timer {
+    font-size: 2rem;
+    color: orange;
+    margin-top: 10px;
+}
+
+#explodedMessage {
+    display: none;
+    font-size: 2rem; 
+    color: red;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+    .button {
+        width: 50px; 
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .display {
+        font-size: 1.5rem;
+    }
+
+    #message, #timer, #explodedMessage {
+        font-size: 1.2rem; 
+    }
+}

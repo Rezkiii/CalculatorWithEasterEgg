@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>. . .</title>
+    <link rel="stylesheet" href="style2.css">
+   
+</head>
+<body>
+    <div id="terminal"></div>
+
+    <script>
+        const messages = [
+            '<Calculator> : "this is a secret mission"',
+            '<Calculator> : "You need to defuse the Bomb"',
+            '<Calculator> : "Goodluck"'
+        ];
+
+        let index = 0;
+        let charIndex = 0;
+
+        function typeMessage() {
+            if (index < messages.length) {
+                if (charIndex < messages[index].length) {
+                    document.getElementById('terminal').textContent += messages[index][charIndex];
+                    charIndex++;
+                    setTimeout(typeMessage, 50); 
+                } else {
+                    document.getElementById('terminal').textContent += '\n';
+                    index++;
+                    charIndex = 0;
+                    if (index === messages.length) {
+                        setTimeout(() => {
+                            window.location.href = 'bomb.html'; 
+                        }, 500); 
+                    } else {
+                        setTimeout(typeMessage, 500); 
+                    }
+                }
+            }
+        }
+
+        typeMessage();
+    </script>
+</body>
+</html>
